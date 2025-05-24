@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROLLS ROYCE</title>
+  <link rel="stylesheet" href="../style.css" />
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+<link rel="stylesheet" href="../style2.css">
+  <!-- ✅ Loader Style -->
+  <style>
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:  rgb(25, 23, 23);;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loader-wrapper img {
+      width: 200px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+
+    body.loaded #loader-wrapper {
+      display: none;
+    }
+
+    body:not(.loaded) header,
+    body:not(.loaded) section,
+    body:not(.loaded) footer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Loader -->
+  <div id="loader-wrapper">
+    <img src="../lo.png" alt="Loading..." />
+  </div>
+
+  <header>
+    <nav class="v">
+      <img src="../lo.png" width="130px" style="float: inline-start; margin-right: 550px;" />
+      <a href="../MAIN1.html" class="home" id="a">HOME</a>
+      <div class="menu" id="a">MENU
+        <div class="box">
+          <a href="../bmw/BMW.html">BMW</a>
+          <a href="../jaguar/JAGUAR.html">JAGUAR</a>
+          <a href="../mercedes/mercedes.html">MERCEDES</a>
+          <a href="../rollroyce/rollroyce.html">ROLLROYCE</a>
+          <a href="../tata/tata.html">TATA</a>
+          <a href="../toyota/toyota.html">TOYOTA</a>
+        </div>
+      </div>
+      <a href="../cars.html" id="a"> CARS </a>
+      <a href="../about.html" id="a"> ABOUT</a>
+      <a href="../login.html" id="a">LOGIN</a>
+      <a href="../contact.html" id="a">CONTACT</a>
+    </nav>
+  </header>
+
+  <section>
+    <div id="sliderc">
+      <a href="../rollroyce/rollroyce-sedan.html"><img src="../rollroyce/img/rollroyce-red-sedan.webp" alt="Cullinan"></a>
+      <a href="../rollroyce/rollroyce-sedan.html"><img src="../rollroyce/img/rollroyce-black-sedan.webp " alt="dawn"></a>
+      <a href="../rollroyce/rollroyce-sedan.html"><img src="../rollroyce/img/rollroyce-white-sedan.webp " alt="ghost"></a>
+      <a href="../rollroyce/rollroyce-sport.html"><img src="../rollroyce/img/rollroyce-red-sport.webp" alt="phantom"></a>
+      <a href="../rollroyce/rollroyce-sport.html"><img src="../rollroyce/img/rollroyce-black-sport.webp " alt="spectre"></a>
+      <a href="../rollroyce/rollroyce-sport.html"><img src="../rollroyce/img/rollroyce-white-sport.webp" alt="wraith"></a>
+      <a href="../rollroyce/rollroyce-suv.html"><img src="../rollroyce/img/rollroyce-red-suv.webp" alt=""></a>
+      <a href="../rollroyce/rollroyce-suv.html"><img src="../rollroyce/img/rollroyce-black-suv.webp" alt=""></a>
+      <a href="../rollroyce/rollroyce-suv.html"><img src="../rollroyce/img/rollroyce-white-suv.webp" alt="">
+      </a>
+      <div class="controlsc">
+        <button onclick="prevImage()">&#10094;</button>
+        <button onclick="nextImage()">&#10095;</button>
+      </div>
+    </div>
+         <div class="buy">
+                <a href="../cars.html" class="bu">BUY CAR</a>
+            </div>
+  </section>
+
+  <footer>
+    <hr>
+    <p>© All right reserved by SCC 2025<br>FOR CONTACT : 9409908566</p>
+  </footer>
+
+  <!-- ✅ Scripts -->
+  <script>
+    // Loader delay
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 5000); // 5 seconds
+    });
+
+    // Image Slider
+    let images = document.querySelectorAll("#sliderc img");
+    let currentIndex = 0;
+
+    function changeImage(index) {
+      images[currentIndex].classList.remove("active");
+      currentIndex = (index + images.length) % images.length;
+      images[currentIndex].classList.add("active");
+    }
+
+    function nextImage() {
+      changeImage(currentIndex + 1);
+    }
+
+    function prevImage() {
+      changeImage(currentIndex - 1);
+    }
+
+    setInterval(nextImage, 3000);
+  </script>
+</body>
+</html>
