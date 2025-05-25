@@ -35,6 +35,10 @@ h1,h2
     padding: 3px 8px;
     border: 2px solid #f05462;
 }
+h1,h2,h3
+{
+    color:#444
+}
 
 .side-menu
 {
@@ -98,14 +102,6 @@ h1,h2
     display: flex;
     justify-content: center;
 }
-.container .header .nav .user
-{
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .container .header .nav .search input[type=text]
 {
     border: none;
@@ -122,6 +118,15 @@ h1,h2
     align-items: center;
     justify-content: center;
 }
+.container .header .nav .user
+{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .container .content
 {
     position: relative;
@@ -135,4 +140,14 @@ h1,h2
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap ;
+}
+.container .content .cards .card
+{
+    width:  250px;
+    height: 150px;
+    background-color: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around ;
 }
