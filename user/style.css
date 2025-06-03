@@ -33,7 +33,7 @@ body {
     text-decoration: none;
     /* margin-right: 2px; */
     font-size: 16px;
-    padding: 5px;
+    padding-left: 5px;
 
 }
 #a:hover
@@ -41,7 +41,7 @@ body {
     background-color: white; 
     box-shadow: 0 0 20px red, 0 0 40px blue;
     border-radius: 6px;
-    /* padding: 5px; */
+   padding: 5px;
     
     
 }
@@ -89,7 +89,7 @@ body {
     text-decoration: none;
     font-family: Arial, sans-serif;
     border-radius: 40px;
-    margin-left: 5px;   
+    /* margin-left: 5px;    */
 }
 nav
 {
