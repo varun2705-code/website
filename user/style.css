@@ -2,9 +2,6 @@
     color: aquamarine;
     text-decoration: none;
 }
-
-
-
 body {
     display: flex;
     height: 100vh;
@@ -73,7 +70,7 @@ body {
     background-color: rgb(40, 37, 37); 
     box-shadow: 0 0 20px red, 0 0 40px blue;
     border-radius: 6px;
-    padding-left: 10px; /* subtle slide effect on hover */
+    padding-left: 10px; 
 }
 
 .menu:hover .box {
@@ -88,7 +85,7 @@ body {
     text-decoration: none;
     font-family: Arial;
     border-radius: 40px;
-    /* margin-left: 5px;    */
+  
 }
 nav
 {
@@ -104,25 +101,6 @@ section{
 margin-bottom: 50px;
 flex: 1;
 
-}
-footer
-{
-position: relative;
-bottom: 0;
-left: 0;
-width: 99%;
-background:transparent;
-color: black;
-text-align: center;
-padding: 10px;
-/* margin-top: auto; */
-
-}
-table
-{
-    margin-top: 100px;
-    color: beige;
-    margin-bottom: 10px;
 }
 #sliderc 
 {
@@ -182,11 +160,30 @@ table
 .controlsc button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+footer
+{
+position: relative;
+bottom: 0;
+left: 0;
+width: 99%;
+background:transparent;
+color: black;
+text-align: center;
+padding: 10px;
+
+
+}
+table
+{
+    margin-top: 100px;
+    color: beige;
+    margin-bottom: 10px;
+}
+
 .lang-content {
     margin-top: 20px;
     padding: 20px;
-    /* border: 1px solid #ccc; */
-    /* background-color: #f9f9f9; */
+    
     display: none;
     transition: opacity 0.5s ease;
     opacity: 0;
@@ -340,10 +337,6 @@ footer {
     text-align: center;
     padding: 20px;
     color: white;
-}
-
-body {
-    background-color: #272424f4;
 }
 #logo
     {
