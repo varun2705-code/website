@@ -12,9 +12,19 @@
     <link rel="stylesheet" href="../style2.css">
 </head>
 <body>
+<<<<<<< HEAD
     <div id="loader-wrapper">
         <img src="../lo.png" alt="Loading..." />
     </div>
+=======
+
+    
+    <div id="loader-wrapper">
+        <img src="../lo.png" alt="Loading..." />
+    </div>
+
+
+>>>>>>> 74b4c68b34dc76a050d697b8cbae636ee2179057
   <header>
     <nav class="v">
         <img src="../lo.png" width="130px" style="float: inline-start; margin-right: 450px;" />
@@ -63,8 +73,41 @@
             <br>
             FOR CONTACT : 9409908566
         </p>
+<<<<<<< HEAD
   </footer>
    <script src="../slider.js"></script>
+=======
+    </footer>
+
+    <script>
+        // Loader timeout
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 5000);
+        });
+
+        // Image slider logic
+        let images = document.querySelectorAll("#sliderc img");
+        let currentIndex = 0;
+
+        function changeImage(index) {
+            images[currentIndex].classList.remove("active");
+            currentIndex = (index + images.length) % images.length;
+            images[currentIndex].classList.add("active");
+        }
+
+        function nextImage() {
+            changeImage(currentIndex + 1);
+        }
+
+        function prevImage() {
+            changeImage(currentIndex - 1);
+        }
+
+        setInterval(nextImage, 5000);
+    </script>
+>>>>>>> 74b4c68b34dc76a050d697b8cbae636ee2179057
 </body>
 
 </html>
